@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Card Game</h1>
+    <div class="container">
+        <div class="card-form">
+            <h2>Add Card</h2>
+            <form id="addCardForm" onsubmit="addCard(event)">
+                <input type="text" name="name" placeholder="Name" required><br><br>
+                <textarea name="description" placeholder="Description" required></textarea><br><br>
+                <input type="number" name="attack" placeholder="Attack" required><br><br>
+                <input type="number" name="defense" placeholder="Defense" required><br><br>
+                <input type="number" name="heal" placeholder="Heal" required><br><br>
+                <button type="submit">Add Card</button>
+            </form>
+        </div>
+        <div class="database-view">
+            <h2>Database View</h2>
+            <?php include 'database_view.php'; ?>
+        </div>
+    </div>
+</body>
+</html>
